@@ -24,7 +24,7 @@ using namespace std;
 } */    
 // My Appraoch its passing only 1 test case out of 9
 
-int main(){
+/*int main(){
     int k;
     cin >> k;
 
@@ -40,4 +40,27 @@ int main(){
     else{
         cout << k << endl;
     }
+}*/
+
+// ChatGPT Approach
+
+int main() {
+    int K;
+    cin >> K;
+
+    // Starting time: 21:00 -> in minutes
+    int start = 21 * 60;
+
+    // Add K minutes
+    int total = start + K;
+
+    // Convert back to hours and minutes
+    int hour = total / 60;
+    int minute = total % 60;
+
+    // Print with leading zeros
+    cout << setw(2) << setfill('0') << hour << ":"
+         << setw(2) << setfill('0') << minute << endl;
+
+    return 0;
 }
